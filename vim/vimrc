@@ -1,0 +1,43 @@
+" echo ASCII-art cat >^.^<
+" echo ">^.^<"
+
+" map
+map _ ddkP
+map + ddp
+
+" exec pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+call pathogen#infect()
+call pathogen#helptags()
+
+" hit enter to cancel searched highlight
+noremap <CR> :nohlsearch<CR>
+
+" select ALL
+map <C-A> ggVG
+" Tab
+map <TAB> v>
+map <S-TAB> v<
+" enable mouse
+"set mouse=a
+
+function! MakeTagsAndReload()
+    try
+        execute ":!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
+        set tags+=./tags
+    catch
+    endtry
+endfunction
+
+map <F10> :call MakeTagsAndReload()<CR><CR>
+nnoremap <F11> <c-t>
+nnoremap <F12> <c-]>
+
+map <leader>" viw<esc>a"<esc>hbi"<esc>lel
+
+au BufRead,BufNewFile *.asm,*.c,*.cpp,*.java,*.cs,*.lua,*.py,*.h,*.vim 2match Underlined /.\%81v/
+execute pathogen#infect()

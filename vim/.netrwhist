@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/gary/tmp/go-ethereum'
+let g:netrw_dirhist_2='/Users/gary/tmp'
+let g:netrw_dirhist_3='/Users/gary/tmp/ethereum-abe/test'
+let g:netrw_dirhist_4='/Users/gary/tmp/ethereum-abe/abe/block/driver'
+let g:netrw_dirhist_5='/Users/gary/tmp/go-learning/package'
+let g:netrw_dirhist_6='/Users/gary/vim_settings'
+let g:netrw_dirhist_7='/Users/gary/vim_settings/acm_template'
+let g:netrw_dirhist_8='/Users/gary/dotfiles/bash'
